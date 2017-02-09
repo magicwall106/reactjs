@@ -1,0 +1,19 @@
+{
+  "name": "tuong.le",
+  "version": "1.0.0",
+  "description": "practise reactjs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicwall106/reactjs.git"
+  },
+  "author": "tuong.le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicwall106/reactjs/issues"
+  },
+  "homepage": "https://github.com/magicwall106/reactjs#readme"
+}
