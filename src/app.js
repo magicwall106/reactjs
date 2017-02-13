@@ -57,7 +57,7 @@ const About = (props) => {
     return (
     <div>
         <h1>About</h1>
-        <Link to='/about'>Instagram Feed</Link>
+        <Link to='/about/instagram'>Instagram Feed</Link>
         <br />
         <Link to='/about/twitter'>Twitter Feed</Link>
         {props.children}
@@ -66,15 +66,20 @@ const About = (props) => {
 
 const NotFound = () => (<h1>404.. This page is not found!</h1>);
 
+const TaskForm = () => (<h1>Task Form!</h1>);
+
 class App extends Component {
     render() {
         return (
             <Router history={hashHistory}>
                 <Route path='/' component={Container}>
                     <IndexRoute component={Home} />
-                    <Route path='/task(/:id)' component={Task} />
+                    <Route path='/task/:id' component={TaskDetail} />
+                    <Route path='/task' component={Task} />
+                    <Route path='/task_form' component={TaskForm} />
                     <Route path='/about' component={About}>
                         <IndexRoute component={Instagram} />
+                        <Route path='instagram' component={Instagram} />
                         <Route path='twitter' component={TwitterFeed} />
                     </Route>
                     <Route path='*' component={NotFound} />
