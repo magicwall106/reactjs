@@ -1,8 +1,8 @@
-# OSX
-#
 .DS_Store
-
-# node.js
-#
-node_modules/
-npm-debug.log
+.tmp
+.git
+node_modules
+.settings
+*.log
+dist/
+.idea
