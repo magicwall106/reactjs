@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
+import Instagram from './component/Instagram';
+import TwitterFeed from './component/Twitter';
+import TaskDetail from './component/TaskDetail';
+import Container from './component/Container';
 
 const Home = () => (
     <div><h1>Welcome to <Link to='/task'>Task Manager</Link>!</h1></div>
@@ -49,8 +53,6 @@ const Task = (props) => {
     </div>);
 };
 
-const TaskDetail = (props) => { return (<div><h1>Task Detail {props.task_id}</h1></div>); };
-
 const About = (props) => {
     return (
     <div>
@@ -63,26 +65,6 @@ const About = (props) => {
 };
 
 const NotFound = () => (<h1>404.. This page is not found!</h1>);
-
-const Nav = () => (
-  <div>
-    <Link onlyActiveOnIndex activeStyle={{ color: '#53acff' }} to='/'>Home</Link>&nbsp;
-    <Link activeStyle={{ color: '#53acff' }} to='/task'>Task</Link>&nbsp;
-    <Link activeStyle={{ color: '#53acff' }} to='/about'>About</Link>
-  </div>
-);
-
-const Container = (props) => {
-    return (
-    <div>
-        <Nav />
-        {props.children}
-    </div>);
-};
-
-const Instagram = () => (<h3>Instagram Feed</h3>);
-
-const TwitterFeed = () => (<h3>Twitter Feed</h3>);
 
 class App extends Component {
     render() {
